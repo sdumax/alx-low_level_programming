@@ -1,0 +1,5 @@
+echo -e "#!/bin/bash \ngcc -c $CFILE -o `echo $CFILE | cut -d. -f1`.o" >> 1-compiler
+echo -e "#!/bin/bash \ngcc -S $CFILE -o `echo $CFILE | cut -d. -f1`.s" >> 2-assembler
+
+
+chmod +x ./*
