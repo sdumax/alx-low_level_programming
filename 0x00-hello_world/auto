@@ -1,5 +1,7 @@
-echo -e "#!/bin/bash \ngcc -c $CFILE -o `echo $CFILE | cut -d. -f1`.o" >> 1-compiler
-echo -e "#!/bin/bash \ngcc -S $CFILE -o `echo $CFILE | cut -d. -f1`.s" >> 2-assembler
+echo -e "#!/bin/bash \ngcc -S $CFILE" > 1-compiler
+echo -e "#!/bin/bash \ngcc -S $CFILE" > 2-assembler
+echo -e "#!/bin/bash \ngcc $CFILE -o cisfun" > 3-name
+
 
 
 chmod +x ./*
